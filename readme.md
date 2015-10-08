@@ -11,7 +11,7 @@ More info on Dart https://www.dartlang.org/
 
 ![Screen 1](https://cloud.githubusercontent.com/assets/14982936/10375723/fc3d3a72-6df1-11e5-920a-308ca1dbc016.png)
 
-![Screen 2](https://cloud.githubusercontent.com/assets/14982936/10375740/0f6bb70e-6df2-11e5-936c-62602e3a4d40.png)
+![screen 2](https://cloud.githubusercontent.com/assets/14982936/10376258/d43b9674-6df4-11e5-8017-12f9bdc632cd.png)
 
 
 #### Possible project resurection ideas
