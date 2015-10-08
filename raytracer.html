@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dart Ray Tracer v0.01</title>
+    
+    <script async type="application/dart" src="raytracer.dart"></script>
+    <script async src="packages/browser/dart.js"></script>
+    
+    <link rel="stylesheet" href="css/raytracer.css">
+  </head>
+  <body>
+    <h1>Dart Ray Tracer</h1>
+    Simple raytracter coded in Dart. Ben Coleman 2014. Version 0.01<br/>
+    
+    <canvas width="640px" height="480px" id="canvas_output">
+    Canvas is not supported in your browser. WTF dude.
+    </canvas>
+    <br/>
+    Choose Scene:<select id="sel_scenes">
+      <option value="test1.json">Test Scene 1</option>
+      <option value="test2.json">Test Scene 2</option>
+      <!--option value="test3.json">Balls</option-->
+    </select>
+    
+    <button id="but_load">Load & Render</button> 
+    <br/>
+    
+    <textarea id="ta_scene" rows="20" cols="80"></textarea> 
+    <br/>
+    <button id="but_render"><b>Re-render Scene</b></button> 
+    <br/>
+    <textarea id="ta_msgs" rows="5" cols="80" readonly></textarea>
+  </body>
+</html>

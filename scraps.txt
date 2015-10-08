@@ -1,0 +1,156 @@
+
+
+
+
+    double tx = (hit.u * w) % i.width;//.truncate().clamp(0, i.width);
+    double ty = (hit.v * h) % i.width;//.truncate().clamp(0, i.height);
+    //tx = tx.clamp(0, i.width);
+    //ty = ty.clamp(0, i.width);
+    
+    //RGB p1, p2, p3, p4 = new RGB();
+    
+    int tx_int = tx.floor();
+    int ty_int = ty.floor();
+    double tx_mant = tx - tx_int;
+    double ty_mant = ty - ty_int;
+
+    /*
+    Point3D p1 = new Point3D();
+    Point3D p2 = new Point3D();
+    Point3D p3 = new Point3D();
+    Point3D p4 = new Point3D();
+    
+    // first point is in same pixel as tx,ty - but the center
+    p1.x = tx_int + 0.5;
+    p1.y = ty_int + 0.5;
+        
+    // second point is left or right of tx,ty pixel
+    if(tx_mant < 0.5) {
+      //left 
+      p2.x = max(tx_int-1, 0) + 0.5;
+      p2.y = ty_int + 0.5;
+    } else {
+      //right
+      p2.x = min(tx_int+1, i.width-1) + 0.5;
+      p2.y = ty_int + 0.5;
+    }
+    
+    // third point is above or below  tx,ty pixel
+    if(ty_mant < 0.5) {
+      //above
+      p3.y = max(ty_int-1, 0) + 0.5;
+      p3.x = tx_int + 0.5;
+    } else {
+      //below
+      p3.y = min(ty_int+1, i.height-1) + 0.5;
+      p3.x = tx_int + 0.5;
+    }
+    
+    // fourth point is diagonal to tx,ty pixel
+    if(ty_mant < 0.5 ) {
+      //above
+      p4.y = max(ty_int-1, 0) + 0.5;
+    } else {
+      //right
+      p4.y = min(ty_int+1, i.height-1) + 0.5;
+    }
+    if(tx_mant < 0.5) {
+      //left 
+      p4.x = max(tx_int-1, 0) + 0.5;
+    } else {
+      //right
+      p4.x = min(tx_int+1, i.width-1) + 0.5;
+    }
+    
+    //print("$tx, $ty ::: $p1, $p2, $p3, $p4");
+    RGB c1 = i.getRGBPixel(p1.x.floor(), p1.y.floor());
+    RGB c2 = i.getRGBPixel(p2.x.floor(), p2.y.floor());
+    RGB c3 = i.getRGBPixel(p3.x.floor(), p3.y.floor());
+    RGB c4 = i.getRGBPixel(p4.x.floor(), p4.y.floor());
+    double c1l = ((tx - p1.x) * (ty - p1.y)).abs();//(1 - sqrt( ((tx - p1.x) * (tx - p1.x)) + ((ty - p1.y) * (ty - p1.y)) )).abs();
+    double c2l = ((tx - p2.x) * (p2.y - ty)).abs();//(1 - sqrt( ((tx - p2.x) * (tx - p2.x)) + ((ty - p2.y) * (ty - p2.y)) )).abs();
+    double c3l = ((tx - p3.x) * (ty - p3.y)).abs();//(1 - sqrt( ((tx - p3.x) * (tx - p3.x)) + ((ty - p3.y) * (ty - p3.y)) )).abs();
+    double c4l = ((tx - p4.x) * (p4.y - ty)).abs();//(1 - sqrt( ((tx - p4.x) * (tx - p4.x)) + ((ty - p4.y) * (ty - p4.y)) )).abs();
+    //print("$c1l + $c2l + $c3l + $c4l");
+    c1.scale(c1l);
+    c2.scale(c2l);
+    c3.scale(c3l);
+    c4.scale(c4l);
+    
+    textel.r = c1.r / ()
+    
+        */
+        
+
+
+
+
+
+
+
+
+
+
+  "texture": {
+    "type": "CheckUV",
+    "colour1": [0.664, 0.121, 0.089, 0.0],
+    "colour2": [0.8, 0.8, 0.8, 0],
+    "size": 0.12
+    }
+
+
+  /*Sphere ball1 = new Sphere(new Point3D.init(-290.0, -290.0, 2200.0), 80.0)
+    ..setTexture = new TextureBasic.init(RGB.red)
+    ..setMaterial = new Material.init(1.0, 1.0, 1.0, 40.0);
+  Sphere ball2 = new Sphere(new Point3D.init(-90.0, -10.0, 115.0), 80.0)
+    ..setTexture = new TextureBasic.init(new RGB.init(0.2, 0.5, 1.0, 0.0))
+    ..setMaterial = new Material.init(1.0, 1.0, 0.9, 10.0);
+  Sphere ball3 = new Sphere(new Point3D.init(-250.0, 80.0, 170.0), 160.0)
+    ..setTexture = new TextureBasic.init(new RGB.init(0.2, 0.8, 0.1, 0.0))
+    ..setMaterial = new Material.init(1.0, 1.0, 1.0, 4.0);
+  Sphere ball4 = new Sphere(new Point3D.init(150.0, -80.0, 2870.0), 360.0)
+    ..setTexture = new TextureBasic.init(new RGB.init(216.0/255.0, 139.0/255.0, 5.0/255, 0.0))
+    ..setMaterial = new Material.init(1.0,1.0,  1.0, 40.0);
+  scene.addObject(ball1);
+  scene.addObject(ball2);
+  scene.addObject(ball3);
+  scene.addObject(ball4);*/
+  
+  
+  void main() 
+{
+  ball.setTexture(new TextureBasic(RGB.red));
+  querySelector('#stopper').onClick.listen(stopAnim);
+  querySelector('#starter').onClick.listen(startAnim);
+   
+  window.animationFrame.then(animLoop);
+}
+
+void animLoop(num delta) {
+  if(delta - tick > 60) { 
+    double x = osc(count * 10.0, -200.0, 200.0);//  ((count * 10.0 % 500.0)).abs() - 250.0; 
+    double y = osc(count * 6.0, -140.0, 140.0);//  ((count * 10.0 % 500.0)).abs() - 250.0; 
+    draw(x, y);
+    tick = delta;
+    count++;
+  }
+  
+  if(!done) {
+    window.animationFrame.then(animLoop);
+  }
+}
+
+double osc(double input, double min, double max)
+{
+  double range = max - min ;
+  return min + (((input + range) % (range * 2)) - range).abs();
+}
+
+void stopAnim(Event e) {
+  done = true;
+}
+
+void startAnim(Event e) {
+  done = false;
+  window.animationFrame.then(animLoop);
+}

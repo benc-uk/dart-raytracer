@@ -1,0 +1,24 @@
+
+body {
+  background-color: #999999;
+  font-family: 'Open Sans', sans-serif;
+  color: #444444;
+}
+
+h1, p {
+
+}
+
+canvas {
+  background-color: black;
+}
+
+#ta_msgs {
+  color:green;
+  background-color: black;
+}
+
+#ta_scene {
+  font-size: 8pt;
+  font-family: 'Courier New';
+}
