@@ -1,13 +1,13 @@
 {
 "name": "Test Scene 2",
-"background": "sunny-day1.jpg",
+"background": "stormy.png",
 
 "objects": [
   {
   "type": "Sphere",
   "name": "Green ball",
-  "pos": [-70.0, -4, -50.0],
-  "radius": 50.0,
+  "pos": [-70.0, 28, -50.0],
+  "radius": 80.0,
   "material": [0.8, 1.0, 0.5, 10.0, 0.6, 0],
   "texture": {
     "type": "Basic",
@@ -16,10 +16,10 @@
   }, 
   {
   "type": "Sphere",
-  "name": "Green ball",
-  "pos": [60.0, -36, -620.0],
-  "radius": 60.0,
-  "material": [0.7, 1.0, 1.0, 80.0, 0.0, 0],
+  "name": "Red ball",
+  "pos": [60.0, 22, -350.0],
+  "radius": 99.0,
+  "material": [0.7, 1.0, 1.0, 80.0, 0.2, 0],
   "texture": {
     "type": "Basic",
     "colour": [0.77, 0.282, 0.273, 0.0]
@@ -27,23 +27,23 @@
   },
   {
   "type": "Plane",
-  "pos": [0, -50, 0],
+  "pos": [-20, -50, 0],
   "dir": [0, 1, -0.07],
   "width":  5000.0,
   "height":  5000.0,
-  "material": [0.7, 1.0, 0.0, 20.0, 0.2, 0],
+  "material": [1.0, 1.0, 0.0, 20.0, 0.0, 0],
   "texture": {
     "type": "Image",
     "name": "bert",
     "filename": "cobblestone_mossy.png",
-    "scale": [34.0, 74.0]
+    "scale": [100.0, 200.0]
     }
   } 
 ],
 
 "lights": [
 {
-  "pos": [-608.0, 70.0, -900.0]
+  "pos": [-120.0, 90.0, -600.0]
 }
 ]
 
